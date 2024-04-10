@@ -1,8 +1,10 @@
 package cue.edu.co.test.view;
 
 import cue.edu.co.test.mapping.DTO.StudentDTo;
+import cue.edu.co.test.service.impl.RepositoryImpl;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
@@ -10,12 +12,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet({"/test", "/students.html", "/students"})
-public class StudenXLS {
+@WebServlet({"/students", "/students.html"})
+public class StudenXLS extends HttpServlet {
+
+    private static RepositoryImpl service;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,
             IOException {
-        List<StudentDTo> students = service.listar();
+        List<StudentDTo> students = service.listStudent();
         response.setContentType("text/html; charset=UTF-8");
         String servletPath = request.getServletPath();
         boolean esXlS = servletPath.endsWith(".xls");
@@ -47,16 +51,16 @@ public class StudenXLS {
 
             students.forEach(p -> {
                 out.println("   <tr>");
-                out.println("       <td>" + p.getId() + "</td>");
-                out.println("       <td>" + p.getName() + "</td>");
-                out.println("       <td>" + p.getType() + "</td>");
-                out.println("       <td>" + p.getPrice() + "</td>");
+                out.println("       <td>" + p.id() + "</td>");
+                out.println("       <td>" + p.name() + "</td>");
+                out.println("       <td>" + p.email() + "</td>");
+                out.println("       <td>" + p.semester() + "</td>");
                 out.println("   </tr>");
             });
 
             out.println("</table>");
 
-            if(!esXLS) {
+            if(!esXlS) {
                 out.println("   </body>");
                 out.println("</html>");
             }
