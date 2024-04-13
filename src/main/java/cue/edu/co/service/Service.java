@@ -1,4 +1,4 @@
-package cue.edu.co.test.service;
+package cue.edu.co.service;
 
 import java.util.List;
 

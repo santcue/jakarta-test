@@ -1,7 +1,7 @@
-package cue.edu.co.test.view;
+package cue.edu.co.view;
 
-import cue.edu.co.test.mapping.DTO.StudentDTo;
-import cue.edu.co.test.service.impl.RepositoryImpl;
+import cue.edu.co.mapping.DTO.StudentDTo;
+import cue.edu.co.service.impl.RepositoryImpl;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -10,15 +10,23 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import java.util.List;
 
 @WebServlet({"/students", "/students.html"})
-public class StudenXLS extends HttpServlet {
+public class StudentsXLS extends HttpServlet {
 
-    private static RepositoryImpl service;
+    private RepositoryImpl service;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,
-            IOException {
+    public void init() throws ServletException {
+        try {
+            service = new RepositoryImpl();
+        } catch (SQLException e) {
+            throw new ServletException("Error initializing service", e);
+        }
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<StudentDTo> students = service.listStudent();
         response.setContentType("text/html; charset=UTF-8");
         String servletPath = request.getServletPath();

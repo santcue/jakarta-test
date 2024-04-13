@@ -1,6 +1,4 @@
-package cue.edu.co.test.repository;
-
-import cue.edu.co.test.model.Student;
+package cue.edu.co.repository;
 
 import java.util.List;
 

@@ -1,4 +1,5 @@
-package cue.edu.co.test.Database;
+package cue.edu.co.Database;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,7 +7,7 @@ import java.sql.SQLException;
 
 public class DataBaseConnection {
 
-    private static String url = "jdbc:mysql://localhost:3306/jakarta-test";
+    private static String url = "jdbc:mysql://127.0.0.1:3306/jakarta_test?serverTimezone=UTC";
     private static String user = "root";
     private static String password = "root123";
     private static Connection connection;

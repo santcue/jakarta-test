@@ -1,11 +1,11 @@
-package cue.edu.co.test.service.impl;
+package cue.edu.co.service.impl;
 
-import cue.edu.co.test.Database.DataBaseConnection;
-import cue.edu.co.test.mapping.mappers.StudentMapper;
-import cue.edu.co.test.model.Student;
-import cue.edu.co.test.repository.Repository;
-import cue.edu.co.test.repository.impl.StudentsJDBCImpl;
-import cue.edu.co.test.service.Service;
+import cue.edu.co.Database.DataBaseConnection;
+import cue.edu.co.mapping.mappers.StudentMapper;
+import cue.edu.co.model.Student;
+import cue.edu.co.repository.Repository;
+import cue.edu.co.repository.impl.StudentsJDBCImpl;
+import cue.edu.co.service.Service;
 
 import java.sql.Connection;
 import java.sql.SQLException;

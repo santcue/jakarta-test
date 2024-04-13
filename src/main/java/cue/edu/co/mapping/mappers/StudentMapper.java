@@ -1,7 +1,7 @@
-package cue.edu.co.test.mapping.mappers;
+package cue.edu.co.mapping.mappers;
 
-import cue.edu.co.test.mapping.DTO.StudentDTo;
-import cue.edu.co.test.model.Student;
+import cue.edu.co.mapping.DTO.StudentDTo;
+import cue.edu.co.model.Student;
 
 public class StudentMapper {
 

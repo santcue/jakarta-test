@@ -1,4 +1,4 @@
-package cue.edu.co.test.mapping.DTO;
+package cue.edu.co.mapping.DTO;
 
 import lombok.Builder;
 

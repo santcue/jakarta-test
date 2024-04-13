@@ -1,4 +1,4 @@
-package cue.edu.co.test.view;
+package cue.edu.co.view;
 
 import java.io.*;
 import java.util.Enumeration;
@@ -14,7 +14,7 @@ public class Test extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         response.setContentType("text/html");
-        String metodoHttp = request.getMethod(); // Obtiene el método HTTP de la solicitud (GET, POST, etc.).
+        String methodsHttp = request.getMethod(); // Obtiene el método HTTP de la solicitud (GET, POST, etc.).
         String requestUri = request.getRequestURI(); // Obtiene el URI de la solicitud.
         String requestUrl = request.getRequestURL().toString(); // Obtiene la URL de la solicitud como un String.
         String contextPath = request.getContextPath(); // Obtiene el contexto de la aplicación web.
@@ -37,7 +37,7 @@ public class Test extends HttpServlet {
             out.println("   <body>");
             out.println("       <h1>Cabeceras HTTP Request</h1>");
             out.println("<ul>");
-            out.println("   <li>Método HTTP: " + metodoHttp + "</li>");
+            out.println("   <li>Método HTTP: " + methodsHttp + "</li>");
             out.println("   <li>Request URI: " + requestUri + "</li>");
             out.println("   <li>Request URL: " + requestUrl + "</li>");
             out.println("   <li>Context Path: " + contextPath + "</li>");

@@ -1,4 +1,4 @@
-package cue.edu.co.test.model;
+package cue.edu.co.model;
 
 import lombok.*;
 

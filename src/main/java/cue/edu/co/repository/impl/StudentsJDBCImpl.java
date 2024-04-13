@@ -1,8 +1,8 @@
-package cue.edu.co.test.repository.impl;
+package cue.edu.co.repository.impl;
 
-import cue.edu.co.test.Database.DataBaseConnection;
-import cue.edu.co.test.model.Student;
-import cue.edu.co.test.repository.Repository;
+import cue.edu.co.Database.DataBaseConnection;
+import cue.edu.co.model.Student;
+import cue.edu.co.repository.Repository;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
