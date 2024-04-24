@@ -19,6 +19,10 @@ public class StudentJson extends HttpServlet {
 
     private static RepositoryImpl service;
 
+    public void init() throws ServletException {
+        service = new RepositoryImpl();
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
