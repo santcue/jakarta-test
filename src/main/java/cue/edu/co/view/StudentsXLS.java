@@ -1,6 +1,7 @@
 package cue.edu.co.view;
 
 import cue.edu.co.mapping.DTO.StudentDTo;
+import cue.edu.co.model.Student;
 import cue.edu.co.service.impl.RepositoryImpl;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -13,21 +14,17 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet({"/students", "/students.html"})
+@WebServlet({"/students", "/students.html", "/students.xls"})
 public class StudentsXLS extends HttpServlet {
 
     private RepositoryImpl service;
 
     public void init() throws ServletException {
-        try {
-            service = new RepositoryImpl();
-        } catch (SQLException e) {
-            throw new ServletException("Error initializing service", e);
-        }
+        service = new RepositoryImpl();
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<StudentDTo> students = service.listStudent();
+        List<Student> students = service.listStudent();
         response.setContentType("text/html; charset=UTF-8");
         String servletPath = request.getServletPath();
         boolean esXlS = servletPath.endsWith(".xls");
@@ -54,15 +51,15 @@ public class StudentsXLS extends HttpServlet {
             out.println("       <th>Id</th>");
             out.println("       <th>Name</th>");
             out.println("       <th>Type</th>");
-            out.println("       <th>Price</th>");
+            out.println("       <th>Semester</th>");
             out.println("   </tr>");
 
             students.forEach(p -> {
                 out.println("   <tr>");
-                out.println("       <td>" + p.id() + "</td>");
-                out.println("       <td>" + p.name() + "</td>");
-                out.println("       <td>" + p.email() + "</td>");
-                out.println("       <td>" + p.semester() + "</td>");
+                out.println("       <td>" + p.getId() + "</td>");
+                out.println("       <td>" + p.getName()+ "</td>");
+                out.println("       <td>" + p.getEmail() + "</td>");
+                out.println("       <td>" + p.getSemester() + "</td>");
                 out.println("   </tr>");
             });
 
