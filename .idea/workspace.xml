@@ -11,24 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f41e8288-1301-4dfa-97d9-d0436ff1fcdd" name="Changes" comment="Project initialized">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cue/edu/co/view/StudentJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cue/edu/co/view/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cue/edu/co/test/Database/DataBaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cue/edu/co/Database/DataBaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cue/edu/co/test/mapping/DTO/StudentDTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cue/edu/co/mapping/DTO/StudentDTo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cue/edu/co/test/mapping/mappers/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cue/edu/co/mapping/mappers/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cue/edu/co/test/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cue/edu/co/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cue/edu/co/test/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cue/edu/co/repository/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cue/edu/co/test/repository/impl/StudentsJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cue/edu/co/repository/impl/StudentsJDBCImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cue/edu/co/test/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cue/edu/co/service/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cue/edu/co/test/service/impl/RepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cue/edu/co/service/impl/RepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cue/edu/co/test/view/StudenXLS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cue/edu/co/view/StudentsXLS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cue/edu/co/test/view/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cue/edu/co/view/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cue/edu/co/Database/DataBaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cue/edu/co/Database/DataBaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cue/edu/co/service/impl/RepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cue/edu/co/service/impl/RepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cue/edu/co/view/StudentJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cue/edu/co/view/StudentJson.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +28,7 @@
       <list>
         <option value="package-info" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -58,7 +47,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/santcue/jakarta-test.git&quot;,
-    &quot;accountId&quot;: &quot;ad057a31-fe10-4bea-8338-d4d910c4b676&quot;
+    &quot;accountId&quot;: &quot;ba8fbd1f-1b74-44b5-b3c6-0eeee8e55774&quot;
   }
 }</component>
   <component name="LogFilters">
@@ -89,37 +78,38 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.Test [clean].executor": "Run",
-    "Maven.Test [compile].executor": "Run",
-    "Maven.Test [deploy].executor": "Run",
-    "Maven.Test [package].executor": "Run",
-    "Maven.Test [site].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 10.1.20.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.24942529",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.Test [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Test [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Test [deploy].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Test [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Test [site].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 10.1.20.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ACER/OneDrive/Documentos/Programacion II/jakarta-test&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.24942529&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mongo",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ACER\OneDrive\Documentos\Programacion II\Test\src\main\resources" />
@@ -269,6 +259,17 @@
       <workItem from="1712887024030" duration="4196000" />
       <workItem from="1713040394876" duration="757000" />
       <workItem from="1713041242302" duration="6198000" />
+      <workItem from="1713112860011" duration="714000" />
+      <workItem from="1713269244943" duration="1867000" />
+      <workItem from="1713356097980" duration="86000" />
+      <workItem from="1713356199571" duration="4030000" />
+      <workItem from="1713385395606" duration="595000" />
+      <workItem from="1713877493829" duration="2215000" />
+      <workItem from="1713998836758" duration="27000" />
+      <workItem from="1713998875564" duration="153000" />
+      <workItem from="1713999471007" duration="578000" />
+      <workItem from="1714000086689" duration="894000" />
+      <workItem from="1714001014757" duration="682000" />
     </task>
     <task id="LOCAL-00001" summary="Project initialized">
       <option name="closed" value="true" />
@@ -283,6 +284,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project initialized" />
