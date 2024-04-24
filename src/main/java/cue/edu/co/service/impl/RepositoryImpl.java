@@ -9,22 +9,32 @@ import cue.edu.co.service.Service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class RepositoryImpl implements Service {
 
-    Connection conn = DataBaseConnection.getInstance();
-    private Repository<Student> studentRepository;
-
-    public RepositoryImpl() throws SQLException {
-        this.studentRepository = new StudentsJDBCImpl();
-    }
-
     @Override
-    public List listStudent() {
+    public List<Student> listStudent() {
+
+        List<Student> students = new ArrayList<>();
+
+        students.add(new Student(1, "Juan", "test@gmail.com", 1));
+        students.add(new Student(1, "Luis", "test@gmail.com", 3));
+        students.add(new Student(1, "Marcos", "test@gmail.com", 5));
+        students.add(new Student(1, "Juan", "test@gmail.com", 2));
+
+        return students;
+
+
+        /*
         return studentRepository.list()
+
+
                 .stream()
                 .map(StudentMapper::mapFromModel)
                 .toList();
+
+                 */
     }
 }
