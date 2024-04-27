@@ -1,0 +1,18 @@
+Difference between sendRedirect and getRequestDispatcher
+
+- getRequestDispatcher("/students.html").forward(req, resp)
+
+This code uses the RequestDispatcher to forward the request
+internally within the server to the /students.html resource.
+The original request and response are passed directly to the
+destination resource. The user does not notice this process and
+does not see changes in the URL in the browser's address bar.
+
+- resp.sendRedirect(req.getContextPath() + "/students.html")
+
+This code tells the user's browser to make a new request to
+the specified URL, which is /students.html preceded by the
+application context (obtained with req.getContextPath()).
+This results in a visible change of the URL in the browser's
+address bar. The server responds with a 302 HTTP status code,
+directing the browser to the new location.
