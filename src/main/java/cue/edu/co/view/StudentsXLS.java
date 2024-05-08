@@ -2,6 +2,7 @@ package cue.edu.co.view;
 
 import cue.edu.co.mapping.DTO.StudentDTo;
 import cue.edu.co.model.Student;
+import cue.edu.co.service.Service;
 import cue.edu.co.service.impl.RepositoryImpl;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -11,7 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
+import java.sql.Connection;
 import java.util.List;
 
 @WebServlet({"/students", "/students.html", "/students.xls"})
@@ -24,6 +25,10 @@ public class StudentsXLS extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        Connection conn = (Connection) request.getAttribute("conn");
+        Service service = new RepositoryImpl(conn);
+
         List<Student> students = service.listStudent();
         response.setContentType("text/html; charset=UTF-8");
         String servletPath = request.getServletPath();

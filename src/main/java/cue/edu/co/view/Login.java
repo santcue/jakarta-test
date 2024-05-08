@@ -1,18 +1,23 @@
 package cue.edu.co.view;
 
+import cue.edu.co.service.LoginService;
+import cue.edu.co.service.impl.LoginServiceImpl;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Optional;
 
 @WebServlet("/login")
 public class Login extends HttpServlet {
     final static String USERNAME = "admin";
     final static String PASSWORD = "12345";
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
             IOException {
@@ -20,6 +25,11 @@ public class Login extends HttpServlet {
         String password = req.getParameter("password");
         if (USERNAME.equals(username) && PASSWORD.equals(password)) {
             resp.setContentType("text/html;charset=UTF-8");
+
+            Cookie usernameCookie = new Cookie("username", username);
+            resp.addCookie(usernameCookie);
+            req.getRequestDispatcher("/login.jsp").forward(req, resp);
+
             try (PrintWriter out = resp.getWriter()) {
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
@@ -36,5 +46,10 @@ public class Login extends HttpServlet {
         } else {
             resp.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Lo sentimos no esta autorizado para ingresar a esta página!");
         }
+    }
+
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        LoginService auth = new LoginServiceImpl();
+        Optional<String> cookieOptional = auth.getusername(req);
     }
 }

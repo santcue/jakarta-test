@@ -12,7 +12,7 @@ public class DataBaseConnection {
     private static String password = "root123";
     private static Connection connection;
     public static Connection getInstance() throws SQLException {
-        if(connection==null){
+        if(connection == null){
             connection = DriverManager.getConnection(url,user,password);
         }
         return connection;

@@ -1,6 +1,7 @@
 package cue.edu.co.repository.impl;
 
 import cue.edu.co.Database.DataBaseConnection;
+import cue.edu.co.mapping.DTO.StudentDTo;
 import cue.edu.co.model.Student;
 import cue.edu.co.repository.Repository;
 
@@ -13,14 +14,16 @@ import java.util.List;
 
 public class StudentsJDBCImpl implements Repository<Student> {
 
-    private Connection getConnection() throws SQLException {
-        return DataBaseConnection.getInstance();
+    private Connection conn;
+
+    public StudentsJDBCImpl(Connection conn) {
+        this.conn = conn;
     }
 
     @Override
     public List<Student> list() {
         List<Student> students = new ArrayList<>();
-        try (Statement statement = getConnection().createStatement();
+        try (Statement statement = conn.createStatement();
              ResultSet resultSet = statement.executeQuery("SELECT * FROM students")) {
             while (resultSet.next()) {
                 Student student = createStudent(resultSet);

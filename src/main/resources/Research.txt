@@ -16,3 +16,23 @@ application context (obtained with req.getContextPath()).
 This results in a visible change of the URL in the browser's
 address bar. The server responds with a 302 HTTP status code,
 directing the browser to the new location.
+
+#################################################################
+
+Cookies
+
+Cookies are small text files that a web server can save to the
+user's browser. They contain user or session specific data that
+can be used by the server each time the user visits the site.
+
+Sessions
+
+Sessions are a way of storing information on the server to be
+used throughout a user's visit (a session), providing a way to
+persist data across multiple browser requests.
+
+Differences
+
+- Cookies are stored in the user's browser, while sessions use the server to store data.
+- Using sessions can consume more server resources, while cookies use client storage.
+- Cookies can remain stored in the browser for years (if configured to do so), while sessions are usually limited to the duration of the user's visit.
