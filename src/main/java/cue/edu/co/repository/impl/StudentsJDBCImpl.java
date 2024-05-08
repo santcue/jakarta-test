@@ -1,7 +1,4 @@
 package cue.edu.co.repository.impl;
-
-import cue.edu.co.Database.DataBaseConnection;
-import cue.edu.co.mapping.DTO.StudentDTo;
 import cue.edu.co.model.Student;
 import cue.edu.co.repository.Repository;
 

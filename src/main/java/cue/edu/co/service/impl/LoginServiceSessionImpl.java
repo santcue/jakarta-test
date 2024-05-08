@@ -1,12 +1,15 @@
 package cue.edu.co.service.impl;
 
 import cue.edu.co.service.LoginService;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
 import java.util.Optional;
 
+@ApplicationScoped
 public class LoginServiceSessionImpl implements LoginService {
+
     @Override
     public Optional<String> getusername(HttpServletRequest request){
         HttpSession session = request.getSession();

@@ -1,6 +1,9 @@
 package cue.edu.co.model;
 
+import jakarta.enterprise.context.SessionScoped;
 import lombok.*;
+
+import java.io.Serializable;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -8,7 +11,8 @@ import lombok.*;
 @Getter
 @ToString
 @Builder
-public class Student {
+@SessionScoped
+public class Student implements Serializable {
 
     private int id;
     private String name;

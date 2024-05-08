@@ -17,6 +17,32 @@ This results in a visible change of the URL in the browser's
 address bar. The server responds with a 302 HTTP status code,
 directing the browser to the new location.
 
+What are sessions and why they are different from cookies?
+HTTP sessions and cookies are both techniques used to maintain state in web applications, but they have some key differences:
+
+1. Purpose:
+   - HTTP Sessions: Allow specific user data to be stored during a visit to a website.
+    This data is used to maintain the user's session state.
+   - Cookies: These are small text files that are stored in the user's browser and sent to the server with each request.
+   They are used to identify the user and maintain information about them.
+
+2. Storage:
+   - HTTP Sessions: Session data is stored on the server, not in the user's browser.
+   - Cookies: The data is stored in the user's browser, not on the server.
+
+3. Security:
+   - HTTP Sessions: These are generally more secure than cookies,
+    since session data is not sent with each request and can be set to expire after a period of inactivity.
+   - Cookies: They can be less secure, since data is sent with each request and can be vulnerable to attacks such as session hijacking.
+
+4. Size:
+   - HTTP sessions: They can store a much larger amount of data than cookies.
+   - Cookies: They have a much smaller size limit, generally around 4 KB.
+
+5. Availability:
+   - HTTP Sessions: Session data is only available on the server, not in the user's browser.
+   - Cookies: Cookie data is available on both the server and the user's browser.
+
 #################################################################
 
 Cookies
@@ -35,4 +61,54 @@ Differences
 
 - Cookies are stored in the user's browser, while sessions use the server to store data.
 - Using sessions can consume more server resources, while cookies use client storage.
-- Cookies can remain stored in the browser for years (if configured to do so), while sessions are usually limited to the duration of the user's visit.
+- Cookies can remain stored in the browser for years (if configured to do so),
+while sessions are usually limited to the duration of the user's visit.
+
+These methods are used to configure a connection pool in the Apache Commons DBCP (DataBase Connection Pooling) library.
+ Here is the purpose of each of them:
+
+ pool.setInitialSize(3);
+ pool.setMinIdle(3);
+ pool.setMaxIdle(8);
+
+
+pool.setInitialSize(3);: This method sets the initial size of the connection pool, i.e.,
+the number of connections that will be created when the pool is initialized.
+In this case, it is set to initially create 3 connections in the pool.
+
+pool.setMinIdle(3);: This method sets the minimum number of idle connections that the connection pool should maintain.
+If the number of idle connections is less than this value, the pool will create additional connections to maintain this minimum number.
+In this case, it ensures that there are always at least 3 idle connections in the pool.
+
+pool.setMaxIdle(8);: This method sets the maximum number of idle connections that the connection pool can maintain.
+If the number of idle connections exceeds this value, the pool will begin to close the excess connections.
+In this case, it is set that the pool can maintain up to a maximum of 8 idle connections.
+
+These methods are useful for optimizing performance and resource usage when managing connections to a database in a Java application.
+
+
+@Retention: This annotation is used to specify how long an annotation should be retained at runtime.
+It has a retention, or scope, which can be one of the following options:
+RetentionPolicy.SOURCE: The annotation is retained only in the source code and is not included
+in the compiled bytecode or available during execution.
+RetentionPolicy.CLASS: The annotation is retained in the compiled bytecode but is not available during execution.
+This is the default option if no retention is specified.
+RetentionPolicy.RUNTIME: The annotation is retained in the compiled bytecode and is available during execution via reflection.
+ This option is useful for annotations that need to be processed at runtime.
+
+@Target: This annotation is used to specify on which elements of the code an annotation can be applied.
+It can have one or more enumeration values of the ElementType type, including:
+ElementType.TYPE: The annotation can be applied to classes, interfaces, or enumerations.
+ElementType.FIELD: The annotation can be applied to fields.
+ElementType.METHOD: The annotation can be applied to methods.
+ElementType.PARAMETER: The annotation can be applied to method parameters.
+ElementType.CONSTRUCTOR: The annotation can be applied to constructors.
+ElementType.LOCAL_VARIABLE: The annotation can be applied to local variables.
+ElementType.ANNOTATION_TYPE: The annotation can be applied to annotations.
+
+@Qualifier: This annotation is used to define custom qualifier annotations that allow differentiating
+between multiple implementations of the same interface or type. For example, if you have multiple implementations of a service,
+you can create qualifier annotations to identify each implementation and then use them to
+inject the specific implementation needed into a component of the application.
+This is useful when you need to inject a specific implementation of an interface at an injection point where multiple
+implementations are available.

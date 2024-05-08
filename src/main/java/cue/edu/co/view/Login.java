@@ -2,6 +2,7 @@ package cue.edu.co.view;
 
 import cue.edu.co.service.LoginService;
 import cue.edu.co.service.impl.LoginServiceImpl;
+import jakarta.inject.Inject;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.Cookie;
@@ -15,8 +16,8 @@ import java.util.Optional;
 
 @WebServlet("/login")
 public class Login extends HttpServlet {
-    final static String USERNAME = "admin";
-    final static String PASSWORD = "12345";
+    final static String USERNAME = "root";
+    final static String PASSWORD = "root123";
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
